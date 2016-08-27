@@ -8,18 +8,13 @@ primes = [True]*size
 
 for i in range(2, int(sqrt(size)) + 2):
   if primes[i]:
-    print i
-    k = i*i
-    while k < size:
-      if primes[k] and k % i == 0:
+    for k in range(i*2, size, i):
         primes[k] = False
-#        print str(i) + " " + str(k)
-      k = k + 1
 
 sum = 0
-for i in range(2,size):
+for i in range(2, size):
   if primes[i]:
     sum = sum + i
-    print i
+    print(i)
 
-print sum
+print(sum)

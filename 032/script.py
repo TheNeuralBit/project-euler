@@ -17,14 +17,19 @@ def panDigital(a, b, c):
     if numFound != 1 : return False
   return True
 
+sum = 0
 for i in range(2, 10):
   for j in range(1000, 5000):
     product = i * j
     if panDigital(i, j, product):
-      print str(i) + " * " + str(j) + " = " + str(product)
+      print("%d * %d = %d" % (i, j, product))
+      sum += product
 
 for i in range(10, 99):
   for j in range(100, 999):
     product = i * j
     if panDigital(i, j, product):
-      print str(i) + " * " + str(j) + " = " + str(product)
+      print("%d * %d = %d" % (i, j, product))
+      sum += product
+
+print(sum)

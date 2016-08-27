@@ -3,7 +3,7 @@
 import math
 
 def nthDigit(x , n):
-  return ((x-x%10**n)/(10**n))%10
+  return int(((x-x%10**n)/(10**n))%10)
 
 def factorial(x):
   rtrn = 1
@@ -19,7 +19,12 @@ def factorialSum(x):
 # cannot be greater than 1999999
 # after that all factSums are less than num
 # (could stop a little earlier, but this is good enough)
+sum = 0
 for i in range(10, 1999999):
   numLess = 0
   factSum = factorialSum(i)
-  if factSum == i : print i
+  if factSum == i:
+      print(i)
+      sum += i
+
+print("SUM: %d" % sum)

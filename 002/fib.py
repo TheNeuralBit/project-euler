@@ -6,8 +6,8 @@ sum = 0
 while fib < 4000000:
   if fib % 2 == 0:
     sum = sum + fib
-    print fib
+    print(fib)
   temp = fib
   fib = fib + last
   last = temp
-print sum
+print(sum)
